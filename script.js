@@ -16,3 +16,12 @@ function checkNewAnswer() {
     window.location.href = "tryagain.html";
   }
 }
+function checkNewAnswer2() {
+  var newAnswer = document.getElementById("newAnswerInput").value;
+
+  if (newAnswer === "Göteborg") {
+    window.location.href = "correct.html";
+  } else {
+    window.location.href = "tryagain2.html";
+  }
+}
