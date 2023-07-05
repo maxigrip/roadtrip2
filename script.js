@@ -1,27 +1,24 @@
+var attempt = 1;
+
 function checkAnswer() {
   var userInput = document.getElementById("userInput").value;
   
   if (userInput === "Göteborg") {
     window.location.href = "correct.html";
   } else {
-    window.location.href = "incorrect.html";
+    var nextPage = "try" + attempt + ".html";
+    window.location.href = nextPage;
   }
 }
-function checkNewAnswer() {
-  var newAnswer = document.getElementById("newAnswerInput").value;
 
-  if (newAnswer === "Göteborg") {
+function checkTryAnswer() {
+  var tryInput = document.getElementById("tryInput").value;
+
+  if (tryInput === "Göteborg") {
     window.location.href = "correct.html";
   } else {
-    window.location.href = "tryagain.html";
-  }
-}
-function checkNewAnswer2() {
-  var newAnswer = document.getElementById("newAnswerInput").value;
-
-  if (newAnswer === "Göteborg") {
-    window.location.href = "correct.html";
-  } else {
-    window.location.href = "tryagain2.html";
+    attempt++;
+    var nextPage = "try" + attempt + ".html";
+    window.location.href = nextPage;
   }
 }
